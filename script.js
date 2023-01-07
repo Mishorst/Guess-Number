@@ -40,8 +40,6 @@ document.querySelector('.check').addEventListener('click', function () {
 
     // Level 2
     // Finish Level 2
-    console.log(level);
-    console.log('level');
     if (guess === secretNumber && level >= 2) {
       document.querySelector('.next-level').style.display = 'none';
       displayMessage('🥳 Congrats! You won level 2!');
@@ -73,11 +71,11 @@ document.querySelector('.check').addEventListener('click', function () {
     // When guess is wrong
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      displayMessage(guess > secretNumber ? '📈 Too Hight' : '📉 Too low');
+      displayMessage(guess > secretNumber ? '📈 Too High' : '📉 Too low');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      displayMessage('😔 You lost game!');
+      displayMessage('😔 You lost the game!');
     }
   }
 });
